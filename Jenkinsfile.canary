@@ -34,7 +34,7 @@ pipeline {
         container('kubectl') {
           sh "sed -i \"s~weight: .* #v1~weight: ${env.VERSION1} #v1~\" istio/virtual_service_canary.yml"
           sh "sed -i \"s~weight: .* #v2~weight: ${env.VERSION2} #v2~\" istio/virtual_service_canary.yml"
-          sh "sed -i \"s~weight: .* #v3~weight: ${env.VERSION2} #v3~\" istio/virtual_service_canary.yml"
+          sh "sed -i \"s~weight: .* #v3~weight: ${env.VERSION3} #v3~\" istio/virtual_service_canary.yml"
         }
       }
     }
